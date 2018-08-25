@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 import { Book, Thumbnail } from '../shared/book';
 
@@ -9,6 +9,7 @@ import { Book, Thumbnail } from '../shared/book';
 })
 export class BookListComponent implements OnInit {
   books: Book[];
+  @Output() showDetailEvent = new EventEmitter<Book>(); // vom Typ Book
   constructor() { }
 
   ngOnInit() {
@@ -35,5 +36,10 @@ export class BookListComponent implements OnInit {
       )
     ];
   }
+
+  showDetails(book: Book) {
+    this.showDetailEvent.emit(book); // sobald das Buch angeklickt wird, wird in parent Komponente via EventEmitter<Book> übergeben, der Callback (showDetailsEvent) wird in Parent Komponente platziert!
+  }
+
 
 }

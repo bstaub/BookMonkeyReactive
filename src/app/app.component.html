@@ -1,5 +1,10 @@
-<bm-book-list *ngIf="listOn" (showDetailEvent)="showDetails($event)"></bm-book-list>
-<bm-book-details *ngIf="detailsOn" [book]="book" (showListEvent)="showList()"></bm-book-details>
+<div class="ui two item tabs menu">
+  <a routerLink="home" routerLinkActive="active" class="item">Home</a>
+  <a routerLink="books" routerLinkActive="active" class="item">Bücher</a>
+</div>
+<router-outlet></router-outlet>
+<!--<bm-book-list *ngIf="listOn" (showDetailEvent)="showDetails($event)"></bm-book-list>-->
+<!--<bm-book-details *ngIf="detailsOn" [book]="book" (showListEvent)="showList()"></bm-book-details>-->
 
 
 

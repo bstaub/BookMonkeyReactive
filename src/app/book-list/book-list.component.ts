@@ -10,16 +10,16 @@ import {BookStoreService} from '../shared/book-store.service';
 })
 export class BookListComponent implements OnInit {
   books: Book[];
-  @Output() showDetailEvent = new EventEmitter<Book>(); // vom Typ Book
+  // @Output() showDetailEvent = new EventEmitter<Book>(); // vom Typ Book
   constructor(private bs: BookStoreService) { }
 
   ngOnInit() {
    this.books = this.bs.getAll();
   }
 
-  showDetails(book: Book) {
-    this.showDetailEvent.emit(book); // sobald das Buch angeklickt wird, wird in parent Komponente via EventEmitter<Book> übergeben, der Callback (showDetailsEvent) wird in Parent Komponente platziert!
-  }
+  // showDetails(book: Book) {
+  //   this.showDetailEvent.emit(book); // sobald das Buch angeklickt wird, wird in parent Komponente via EventEmitter<Book> übergeben, der Callback (showDetailsEvent) wird in Parent Komponente platziert!
+  // }
 
 
 }

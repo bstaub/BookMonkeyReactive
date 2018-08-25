@@ -9,21 +9,21 @@ import {Book} from './shared/book';
 export class AppComponent {
   title = 'BookMonkey BS APP';
 
-  listOn = true;
-  detailsOn = false;
+  // listOn = true;
+  // detailsOn = false;
 
-  book: Book;  // für Detail Ansicht
+  // book: Book;  // für Detail Ansicht
 
 
-  showDetails(detail: Book) {
-    this.listOn = false;
-    this.detailsOn = true;
-    this.book = detail;
-  }
-
-  showList() {
-    this.listOn = true;
-    this.detailsOn = false;
-  }
+  // showDetails(detail: Book) {
+  //   this.listOn = false;
+  //   this.detailsOn = true;
+  //   this.book = detail;
+  // }
+  //
+  // showList() {
+  //   this.listOn = true;
+  //   this.detailsOn = false;
+  // }
 
 }

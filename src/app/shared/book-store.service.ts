@@ -37,4 +37,8 @@ export class BookStoreService {
     return this.books;
   }
 
+  getSingle(isbn) {
+    return this.books.find(book => book.isbn === isbn);  // gibt das Buch auf welches die isbn Nummer matched zurück!
+  }
+
 }

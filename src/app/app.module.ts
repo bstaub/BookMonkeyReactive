@@ -11,6 +11,9 @@ import {AppRoutingModule} from './app-routing.module';
 import {HttpModule} from '@angular/http';
 import {HttpClientModule} from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
+import { BookFormComponent } from './book-form/book-form.component';
+import {DateValueAccessorModule} from 'angular-date-value-accessor';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,10 +22,11 @@ import { SearchComponent } from './search/search.component';
     BookListItemComponent,
     BookDetailsComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    BookFormComponent
   ],
   imports: [
-    SuiModule, BrowserModule, AppRoutingModule, HttpClientModule
+    SuiModule, BrowserModule, AppRoutingModule, HttpClientModule, DateValueAccessorModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

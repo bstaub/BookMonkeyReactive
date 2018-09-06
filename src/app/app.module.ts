@@ -13,7 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
 import { BookFormComponent } from './book-form/book-form.component';
 import {DateValueAccessorModule} from 'angular-date-value-accessor';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import {FormsModule} from '@angular/forms';
     BookFormComponent
   ],
   imports: [
-    SuiModule, BrowserModule, AppRoutingModule, HttpClientModule, DateValueAccessorModule, FormsModule
+    SuiModule, BrowserModule, AppRoutingModule, HttpClientModule, DateValueAccessorModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
